@@ -5,12 +5,15 @@ public class CharacterCounter {
     private int counter;
     private int line;
     private String myString;
+    private int wordcount;
 
 
     public CharacterCounter() {
         counter = 0;
         line = 0;
         myString = "Hej";
+        wordcount = 0;
+
     }
 
 
@@ -47,6 +50,12 @@ public class CharacterCounter {
 
     }
 
+    public void countWords(String input) {
+        String stringArray[] = input.split(" ");
+        wordcount += stringArray.length;
+
+    }
+
     public void Stopper(String input) {
 
         if (input.equals("stop")) {
@@ -54,9 +63,12 @@ public class CharacterCounter {
             System.out.println("Shutting down...");
             System.out.println("Total characters used, excluding \"stop\": " + counter);
             System.out.println("Rows of text:" + line);
+            System.out.println("Words: " + wordcount);
         }
     }
 }
+
+
 
 
 

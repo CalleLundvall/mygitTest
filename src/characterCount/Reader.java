@@ -21,6 +21,7 @@ public class Reader {
 
                 Book.countCharacters(input);
                 Book.countLines(input);
+                Book.countWords(input);
                 Book.Stopper(input);
             }
         } else {
